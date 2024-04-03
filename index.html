@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sparse Present Chamois</title>
+    <meta property="og:title" content="Sparse Present Chamois" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-header">
+
+          <header
+            data-thq="thq-navbar"
+            class="navbarContainer home-navbar-interactive"
+          >
+            <div class="home-buttons">
+              <button class="home-login buttonFlat" onclick="navigateToLoginPage()">Login</button>
+              <button class="buttonFilled" onclick="navigateToSignupPage()">Register</button>
+              <!-- Add the following code to display the registered username -->
+              <div id="registered-username" class="home-username"></div>
+            </div>
+            <span class="logo">MATCHUP</span>
+            <div data-thq="thq-navbar-nav" class="home-desktop-menu">
+              <nav class="home-links">
+                <span class="bodySmall">Home</span>
+                <span class="home-nav22 bodySmall">Coat/Pants Selection</span>
+                <span class="home-nav32 bodySmall">How It Works</span>
+                <span class="home-nav42 bodySmall">Shop</span>
+                <span class="home-nav52 bodySmall">Contact</span>
+              </nav>
+              <script>
+                let userData = JSON.parse(localStorage.getItem('userData')) || [];
+                let registeredUsername = userData.length > 0 ? userData[userData.length - 1].username : '';
+
+                // Display the registered username in the #registered-username div
+                const registeredUsernameDiv = document.getElementById('registered-username');
+                registeredUsernameDiv.textContent = `Logged in as: ${registeredUsername}`
+                function navigateToLoginPage() {
+                  // 跳转到登录页面的 URL
+                  window.location.href = "Login.html";
+                }
+                function navigateToSignupPage() {
+                  // 跳转到登录页面的 URL
+                  window.location.href = "signup.html";
+                }
+              </script>
+              <div class="home-buttons">
+                <button class="home-login buttonFlat" onclick="navigateToLoginPage()">Login</button>
+                <button class="buttonFilled" onclick="navigateToSignupPage()">Register</button>
+              </div>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon socialIcons">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-thq="thq-mobile-menu"
+              class="home-mobile-menu1 mobileMenu"
+            >
+              <div class="home-nav">
+                <div class="home-top">
+                  <span class="logo">MATCHUP</span>
+                  <div data-thq="thq-close-menu" class="home-close-menu">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      class="home-icon02 socialIcons"
+                    >
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav class="home-links1">
+                  <span class="home-nav121 bodySmall">Home</span>
+                  <span class="home-nav221 bodySmall">
+                    Coat/Pants Selection
+                  </span>
+                  <span class="home-nav321 bodySmall">How It Works</span>
+                  <span class="home-nav421 bodySmall">Shop</span>
+                  <span class="home-nav521 bodySmall">Contact</span>
+                </nav>
+                <div class="home-buttons1">
+                  <button class="buttonFlat">Login</button>
+                  <button class="buttonFilled">Register</button>
+                </div>
+              </div>
+              <div>
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="home-icon04 socialIcons"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="home-icon06 socialIcons"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 602.2582857142856 1024"
+                  class="home-icon08 socialIcons"
+                >
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="home-hero">
+          <div class="heroContainer home-hero1">
+            <div class="home-container01">
+              <h1 class="home-hero-heading heading1">
+                Discover Your Perfect Match
+              </h1>
+              <span class="home-hero-sub-heading bodyLarge">
+                <span>
+                  <span>
+                    <span>
+                      Elevate Your Style with Our Suit Matching Sales Website
+                    </span>
+                    <span></span>
+                  </span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </span>
+              </span>
+              <div class="home-btn-group">
+                <a href="#Cart" class="home-hero-button1 buttonFilled">
+                  Shop Now
+                </a>
+                <button class="buttonFlat">Learn More&nbsp;→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          alt="pastedImage"
+          src="public/external/pastedimage-6ut4-200w.png"
+          class="home-pasted-image"
+        />
+        <div class="home-features">
+          <div class="featuresContainer">
+            <div class="home-features1">
+              <div class="home-container02">
+                <span class="overline">
+                  <span>features</span>
+                  <br />
+                </span>
+                <h2 class="home-features-heading heading2">
+                  Explore Exciting Features
+                </h2>
+                <span class="home-features-sub-heading bodyLarge">
+                  <span>
+                    <span>
+                      <span>
+                        Discover the innovative functions that make our website
+                        a one-stop destination for all your clothing matching
+                        needs
+                      </span>
+                      <span></span>
+                    </span>
+                    <span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </span>
+                  <span>
+                    <span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                    <span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div class="home-container03">
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Coat/Pants Selection Module</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Easily choose and match different coats and pants for a
+                        personalized look
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Diverse Match Selection</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Easy to mix and match different clothing items to
+                        create unique outfits
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Visual Appearance Preview</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Intuitively see how different clothing combinations look
+                        together before making a purchase
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Purchase Matching Coats</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Buy the perfectly matched coats directly from the
+                        website for convenience
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-pricing">
+          <div class="pricingContainer">
+            <div class="home-container04">
+              <span class="overline">
+                <span>Pricing</span>
+                <br />
+              </span>
+              <h2 class="heading2">Choose Your Perfect Plan</h2>
+              <span class="home-pricing-sub-heading bodyLarge">
+                <span>
+                  <span>
+                    Unlock the full potential of our matching sales website with
+                    the plan that suits you best.
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div class="home-container05">
+              <div class="freePricingCard home-pricing-card">
+                <div class="home-container06">
+                  <span class="home-text36 heading3">Free</span>
+                  <span class="bodySmall">
+                    Access to basic coat/pants selection module
+                  </span>
+                </div>
+                <div class="home-container07">
+                  <span class="home-text37">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-free-plan-price">0</span>
+                </div>
+                <div class="home-container08">
+                  <div class="home-container09">
+                    <span class="home-text40">✔</span>
+                    <span class="bodySmall">Limited match options</span>
+                  </div>
+                  <div class="home-container10">
+                    <span class="home-text41">✔</span>
+                    <span class="bodySmall">
+                      Ability to save favorite matches
+                    </span>
+                  </div>
+                </div>
+                <button class="home-button buttonOutline">
+                  Continue with Free
+                </button>
+              </div>
+              <div class="basicPricingCard home-pricing-card1">
+                <div class="home-container11">
+                  <span class="home-text42 heading3">BASIC</span>
+                  <span class="bodySmall">
+                    More advanced coat/pants selection module
+                  </span>
+                </div>
+                <div class="home-container12">
+                  <span class="home-text43">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-basic-plan-pricing">9.99</span>
+                  <span class="home-text46">/ month</span>
+                </div>
+                <div class="home-container13">
+                  <div class="home-container14">
+                    <span class="home-text47">✔</span>
+                    <span class="bodySmall">All features of FREE plan</span>
+                  </div>
+                  <div class="home-container15">
+                    <span class="home-text49">✔</span>
+                    <span class="bodySmall">Expanded match options</span>
+                  </div>
+                  <div class="home-container16">
+                    <span class="home-text50">✔</span>
+                    <span class="bodySmall">Virtual try-on feature</span>
+                  </div>
+                  <div class="home-container17">
+                    <span class="home-text51">✔</span>
+                    <span class="bodySmall">Discounts on selected items</span>
+                  </div>
+                </div>
+                <button class="home-button01 buttonFilledSecondary">
+                  Try the Basic plan
+                </button>
+              </div>
+              <div class="proPricingCard home-pricing-card2">
+                <div class="home-container18">
+                  <span class="home-text52 heading3">
+                    <span>PRO</span>
+                    <br />
+                  </span>
+                  <span class="bodySmall">
+                    Premium coat/pants selection module with exclusive features
+                  </span>
+                </div>
+                <div class="home-container19">
+                  <span class="home-text55">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-pro-plan-pricing">19.99</span>
+                  <span class="home-text58">/ month</span>
+                </div>
+                <div class="home-container20">
+                  <div class="home-container21">
+                    <span class="home-text59">✔</span>
+                    <span class="bodySmall">
+                      &nbsp;All features of BASIC plan
+                    </span>
+                  </div>
+                  <div class="home-container22">
+                    <span class="home-text61">✔</span>
+                    <span class="bodySmall">Unlimited match options</span>
+                  </div>
+                  <div class="home-container23">
+                    <span class="home-text62">✔</span>
+                    <span class="bodySmall">
+                      Personalized styling recommendations
+                    </span>
+                  </div>
+                  <div class="home-container24">
+                    <span class="home-text63">✔</span>
+                    <span class="bodySmall">
+                      Early access to new collections
+                    </span>
+                  </div>
+                  <div class="home-container25">
+                    <span class="home-text64">✔</span>
+                    <span class="bodySmall">Priority customer support</span>
+                  </div>
+                </div>
+                <button class="home-button02 buttonFilledSecondary">
+                  Try the PRO plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-banner">
+          <div class="bannerContainer home-banner1">
+            <h1 class="home-banner-heading heading2">
+              Find Your Ideal Combination
+            </h1>
+            <span class="home-banner-sub-heading bodySmall">
+              <span>
+                <span>
+                  <span>
+                    Our online clothing/suit matching sales website offers a
+                    unique experience where you can freely choose the perfect
+                    coat and pants combination. With our intuitive selection
+                    module, you can visualize different matches and effortlessly
+                    find the look that suits you best. Explore our collection
+                    and elevate your wardrobe with our stylish and versatile
+                    options.
+                  </span>
+                  <span></span>
+                </span>
+                <span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </span>
+              <span>
+                <span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </span>
+            </span>
+            <a href="#buy" class="home-banner-button buttonFilled">
+              Explore Now
+            </a>
+          </div>
+        </div>
+        <div class="home-faq">
+          <div class="faqContainer">
+            <div class="home-faq1">
+              <div class="home-container26">
+                <span class="overline">
+                  <span>FAQ</span>
+                  <br />
+                </span>
+                <h2 class="home-text82 heading2">Common questions</h2>
+                <span class="home-text83 bodyLarge">
+                  <span>
+                    Here are some of the most common questions that we get.
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div class="home-container27">
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>How does the coat/pants selection module work?</span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Our coat/pants selection module allows users to mix and
+                      match different coats and pants to create their desired
+                      outfit. Simply choose a coat and pair it with the pants of
+                      your choice to see how they look together.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>
+                      Can I freely choose the match for coats and pants?
+                    </span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Yes, users have the freedom to choose any combination of
+                      coats and pants they like. Experiment with different
+                      styles and colors to find the perfect match for your
+                      outfit.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>How can I buy matching coats on the website?</span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Once you have found the perfect coat and pants
+                      combination, simply add the matching coat to your cart and
+                      proceed to checkout. Our secure payment system ensures a
+                      smooth purchasing process.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>
+                      Are there any restrictions on the number of matches I can
+                      create?
+                    </span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      There are no restrictions on the number of matches you can
+                      create on our website. Feel free to explore endless
+                      possibilities and create unique outfits that suit your
+                      style.
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          alt="image"
+          src="https://images.unsplash.com/photo-1605733513597-a8f8341084e6?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE2fHxiYWdzfGVufDB8fHx8MTcxMDc0NTAyMHww&amp;ixlib=rb-4.0.3&amp;w=200"
+          class="home-image"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1552874869-5c39ec9288dc?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fHdvbWVuJTI3cyUyMGNsb3RoaW5nfGVufDB8fHx8MTcxMDc0NjM5OHww&amp;ixlib=rb-4.0.3&amp;h=400"
+          alt="image"
+          class="home-image1"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1613893251373-22925cf3c4c2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEzfHxza2lydHxlbnwwfHx8fDE3MTA3NDY3NjV8MA&amp;ixlib=rb-4.0.3&amp;h=400"
+          alt="image"
+          class="home-image2"
+        />
+        <button type="button" class="home-button03 button">
+          Add 69$&nbsp;
+        </button>
+        <button type="button" class="home-button04 button">Add 69$</button>
+        <div class="home-footer">
+          <footer class="home-footer1 footerContainer">
+            <div class="home-container28">
+              <span id="buy" class="logo">MATCHUP</span>
+              <nav class="home-nav1">
+                <span class="bodySmall">Home</span>
+                <span class="home-nav222 bodySmall">Coat/Pants Selection</span>
+                <span class="home-nav322 bodySmall">How It Works</span>
+                <span class="home-nav422 bodySmall">Shop</span>
+                <span class="home-nav522 bodySmall">Contact</span>
+              </nav>
+            </div>
+            <button type="button" class="home-button05 button">Add 99$</button>
+            <div class="home-container29"></div>
+            <img
+              alt="pastedImage"
+              src="public/external/pastedimage-euui-200w.png"
+              class="home-pasted-image1"
+            />
+            <div class="home-separator"></div>
+            <div class="home-container30">
+              <span class="bodySmall home-text86">
+                © HKMU Group 36
+              </span>
+              <div class="home-icon-group1">
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="home-icon10 socialIcons"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="home-icon12 socialIcons"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 602.2582857142856 1024"
+                  class="home-icon14 socialIcons"
+                >
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <button type="button" class="home-button06 button" onclick="addToCloset('Cloth 1', 0)">Add to Closet</button>
+            <button type="button" class="home-button07 button" onclick="addToCloset('Cloth 2', 1)">Add to Closet</button>
+            <button type="button" class="home-button08 button" onclick="addToCloset('Cloth 3', 2)">Add to Closet</button>
+            <button type="button" class="home-button09 button" onclick="addToCloset('Cloth 4', 3)">Add to Closet</button>
+            <a href="#closet" class="home-link button" onclick="addToCloset('Cloth 5', 4)">Add to Closet</a>
+            <button type="button" class="home-button10 button" onclick="addToCloset('Cloth 6', 5)">Add to Closet</button>
+            <button type="button" class="home-button11 button" onclick="addToCloset('Cloth 7', 6)">Add to Closet</button>
+            <button type="button" class="home-button12 button" onclick="addToCloset('Cloth 8', 7)">Add to Closet</button>
+            <button type="button" class="home-button13 button" onclick="addToCloset('Cloth 9', 8)">Add to Closet</button>
+            <button type="button" class="home-button14 button" onclick="addToCloset('Cloth 10', 9)">Add to Closet</button>
+          </footer>
+        </div>
+
+        <img
+          alt="image"
+          src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fGJhZ3N8ZW58MHx8fHwxNzEwNzQ1MDIwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
+          class="home-image3"
+        />
+        <span id="Cart" class="home-text87">Cart</span>
+
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+
+          h2 {
+            color: #333;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+          }
+
+          button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+          }
+
+          button:hover {
+            background-color: #45a049;
+          }
+
+          .cart-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+          }
+        </style>
+        </head>
+        <body>
+
+
+        <div class="cart-info">
+          <button type="button" onclick="addCart('ClothA',123)">Add ClothA to cart</button>
+          <button type="button" onclick="resetCart()">Clear cart</button>
+          <button type="button" onclick="alert('The total price is $'+getPrice())">Show total price</button>
+        </div>
+
+
+
+        <img
+          alt="pastedImage"
+          src="public/external/pastedimage-bd8-400h.png"
+          class="home-pasted-image2"
+        />
+        <img
+          alt="pastedImage"
+          src="public/external/pastedimage-clol-200h.jpeg"
+          class="home-pasted-image3"
+        />
+        <img
+          alt="image"
+          src="https://images.unsplash.com/photo-1622560480654-d96214fdc887?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDl8fGJhZ3N8ZW58MHx8fHwxNzEwNzQ1MDIwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
+          class="home-image4"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1609172795052-05bf80681031?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxiYWdzfGVufDB8fHx8MTcxMDc0NTAyMHww&amp;ixlib=rb-4.0.3&amp;w=200"
+          alt="image"
+          class="home-image5"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDExfHxiYWdzfGVufDB8fHx8MTcxMDc0NTAyMHww&amp;ixlib=rb-4.0.3&amp;w=200"
+          alt="image"
+          class="home-image6"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDh8fHNraXJ0fGVufDB8fHx8MTcxMDc0Njc2NXww&amp;ixlib=rb-4.0.3&amp;h=400"
+          alt="image"
+          class="home-image7"
+        />
+        <button type="button" class="home-button15 button">Add 499$</button>
+        <img
+          src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fHNraXJ0fGVufDB8fHx8MTcxMDc0Njc2NXww&amp;ixlib=rb-4.0.3&amp;h=400"
+          alt="image"
+          class="home-image8"
+        />
+
+
+      </div>
+      <button type="button" class="refresh-button" onclick="refreshProducts()">Refresh Products</button>
+      <script>
+
+
+        var productImages = [
+          'https://images.pexels.com/photos/3908800/pexels-photo-3908800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/995978/pexels-photo-995978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg',
+          'https://images.pexels.com/photos/4380970/pexels-photo-4380970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/3195980/pexels-photo-3195980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/2498130/pexels-photo-2498130.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2728276/pexels-photo-2728276.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2753233/pexels-photo-2753233.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2775419/pexels-photo-2775419.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2813528/pexels-photo-2813528.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2863899/pexels-photo-2863899.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2870355/pexels-photo-2870355.jpeg?auto=compress&cs=tinysrgb&w=600',
+          'https://images.pexels.com/photos/2871909/pexels-photo-2871909.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2878762/pexels-photo-2878762.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/2916814/pexels-photo-2916814.jpeg?auto=compress&cs=tinysrgb&w=600',
+          'https://images.pexels.com/photos/2954496/pexels-photo-2954496.jpeg?auto=compress&cs=tinysrgb&w=600',
+          'https://images.pexels.com/photos/2960195/pexels-photo-2960195.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/3012940/pexels-photo-3012940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+          'https://images.pexels.com/photos/3014853/pexels-photo-3014853.jpeg?auto=compress&cs=tinysrgb&w=600'
+
+
+          // put URL
+        ];
+
+        //
+        var cartItems = [];
+        function refreshProducts() {
+          // 获取所有需要更新的 image 元素
+          var imageElements = document.querySelectorAll('.home-image, .home-image5, .home-image4, .home-image3, .home-image2, .home-image6, .home-image7, .home-image8');
+
+          // 随机排序 productImages 数组
+          shuffleArray(productImages);
+
+          // 如果有图像元素需要更新
+          if (imageElements.length > 0) {
+            for (var i = 0; i < imageElements.length; i++) {
+              // 首先检查 cartItems 数组中是否有对应的商品信息
+              var foundItem = cartItems.find(function(item) {
+                return item.imageUrl === productImages[i % productImages.length];
+              });
+              if (foundItem) {
+                imageElements[i].src = foundItem.imageUrl;
+              } else {
+                imageElements[i].src = productImages[i % productImages.length];
+              }
+            }
+          } else {
+            console.log('No image elements found with any of the classes: "home-image", "home-image5", "home-image4", "home-image3", "home-image2", "home-image6", "home-image7", "home-image8"');
+          }
+        }
+        // 随机排序数组的工具函数
+        function shuffleArray(array) {
+          for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+        }
+
+        // 在页面加载完成后执行 refreshProducts 函数
+        window.onload = function() {
+          refreshProducts();
+        };
+      </script>
+    </div>
+    <div id="closet"></div>
+    <script>
+      var closetItems = [];
+
+      function addToCloset(clothName, index) {
+        closetItems.push({
+          name: clothName,
+          imageUrl: productImages[index]
+        });
+        cartItems.push({
+          name: clothName,
+          imageUrl: productImages[index]
+        });
+        window.alert("You have added " + clothName + " to your closet.");
+        viewCloset();
+      }
+
+      function viewCloset() {
+        var closetHtml = "";
+        if (closetItems.length === 0) {
+          closetHtml = "Your closet is empty.";
+        } else {
+          closetHtml += "<h2>Your Closet</h2>";
+          for (var i = 0; i < closetItems.length; i++) {
+            closetHtml += "<img src='" + closetItems[i].imageUrl + "' alt='" + closetItems[i].name + "' width='150' height='200'>";
+          }
+        }
+        document.getElementById("closet").innerHTML = closetHtml;
+      }
+    </script>
+    <script
+            data-section-id="navbar"
+
+    ></script>
+  </body>
+</html>
